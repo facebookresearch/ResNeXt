@@ -1,4 +1,17 @@
-# Introduction
+# ResNext: Aggregated Residual Transformations for Deep Neural Networks
+
+By [Saining Xie](http://vcl.ucsd.edu/~sxie), [Ross Girshick](http://www.rossgirshick.info/), [Piotr Dollár](https://pdollar.github.io/), [Zhuowen Tu](http://pages.ucsd.edu/~ztu/), [Kaiming He](http://kaiminghe.com)
+
+UC San Diego, Facebook AI Research
+
+### Table of Contents
+0. [Introduction](#introduction)
+0. [Citation](#citation)
+0. [Requirements and Dependencies](#requirements-and-dependencies)
+0. [Training](#training)
+0. [ImageNet Pretrained Models](#imagenet-pretrained-models)
+
+### Introduction
 This repository contains a [Torch](http://torch.ch) implementation for the [ResNeXt](https://arxiv.org/abs/1611.05431) algorithm for image classification. The code is based on [fb.resnet.torch] (https://github.com/facebook/fb.resnet.torch).
 
 [ResNeXt](https://arxiv.org/abs/1611.05431) is a simple, highly modularized network architecture for image classification. Our network is constructed by repeating a building block that aggregates a set of transformations with the same topology. Our simple design results in a homogeneous, multi-branch architecture that has only a few hyper-parameters to set. This strategy exposes a new dimension, which we call “cardinality” (the size of the set of transformations), as an essential factor in addition to the dimensions of depth and width.
@@ -8,6 +21,7 @@ This repository contains a [Torch](http://torch.ch) implementation for the [ResN
 ##### Figure: Training curves on ImageNet-1K. (Left): ResNet/ResNeXt-50 with the same complexity (~4.1 billion FLOPs, ~25 million parameters); (Right): ResNet/ResNeXt-101 with the same complexity (~7.8 billion FLOPs, ~44 million parameters).
 -----
 
+### Citation
 If you use ResNeXt in your research, please cite the paper:
 ```
 @article{Xie2016,
@@ -18,13 +32,13 @@ If you use ResNeXt in your research, please cite the paper:
 }
 ```
 
-# Requirements and Dependencies
+### Requirements and Dependencies
 See the fb.resnet.torch [installation instructions](https://github.com/facebook/fb.resnet.torch/blob/master/INSTALL.md) for a step-by-step guide.
 - Install [Torch](http://torch.ch/docs/getting-started.html) on a machine with CUDA GPU
 - Install [cuDNN v4 or v5](https://developer.nvidia.com/cudnn) and the Torch [cuDNN bindings](https://github.com/soumith/cudnn.torch/tree/R4)
 - Download the [ImageNet](http://image-net.org/download-images) dataset and [move validation images](https://github.com/facebook/fb.resnet.torch/blob/master/INSTALL.md#download-the-imagenet-dataset) to labeled subfolders
 
-## Training
+### Training
 
 Please follow [fb.resnet.torch] (https://github.com/facebook/fb.resnet.torch) for the general usage of the code, including [how](https://github.com/facebook/fb.resnet.torch/tree/master/pretrained) to use pretrained ResNeXt models for your own task.
 
@@ -56,9 +70,9 @@ To get comparable results using 2/4 GPUs, you should change the batch size and t
 th main.lua -dataset cifar10 -bottleneckType resnext_C -depth 29 -baseWidth 64 -cardinality 16 -weightDecay 5e-4 -batchSize 64 -nGPU 4 -LR 0.05 -nThreads 8 -shareGradInput true
 th main.lua -dataset cifar10 -bottleneckType resnext_C -depth 29 -baseWidth 64 -cardinality 16 -weightDecay 5e-4 -batchSize 32 -nGPU 2 -LR 0.025 -nThreads 8 -shareGradInput true
 ```
-Note: CIFAR datasets will be automatically downloaded and processed for the first time. We found that better CIFAR test acurracy can be achieved using a (on 8 GPUs) batch size of 128.
+Note: CIFAR datasets will be automatically downloaded and processed for the first time. Note that in the arXiv paper CIFAR results are based on pre-activated bottleneck blocks and a batch size of 256. We found that better CIFAR test acurracy can be achieved using original bottleneck blocks and a batch size of 128.
 
-# ImageNet Pretrained Models
+### ImageNet Pretrained Models
 ImageNet pretrained models are licensed under CC BY-NC 4.0.
 
 [![CC BY-NC 4.0](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/)
