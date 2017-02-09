@@ -10,6 +10,7 @@ UC San Diego, Facebook AI Research
 0. [Requirements and Dependencies](#requirements-and-dependencies)
 0. [Training](#training)
 0. [ImageNet Pretrained Models](#imagenet-pretrained-models)
+0. [Third-party re-implementations](#third-party-re-implementations)
 
 ### Introduction
 This repository contains a [Torch](http://torch.ch) implementation for the [ResNeXt](https://arxiv.org/abs/1611.05431) algorithm for image classification. The code is based on [fb.resnet.torch] (https://github.com/facebook/fb.resnet.torch).
@@ -77,7 +78,7 @@ ImageNet pretrained models are licensed under CC BY-NC 4.0.
 
 [![CC BY-NC 4.0](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-###Single-crop (224x224) validation error rate
+#### Single-crop (224x224) validation error rate
 | Network             | GFLOPS | Top-1 Error |  Download   |
 | ------------------- | ------ | ----------- | ------------|
 | ResNet-50 (1x64d)   |  ~4.1  |  23.9        | [Original ResNet-50](https://github.com/facebook/fb.resnet.torch/tree/master/pretrained)       |
@@ -86,3 +87,9 @@ ImageNet pretrained models are licensed under CC BY-NC 4.0.
 | ResNeXt-101 (32x4d) |  ~7.8  |  21.2        | [Download (338MB)] (https://s3.amazonaws.com/resnext/imagenet_models/resnext_101_32x4d.t7)      |
 | ResNeXt-101 (64x4d) |  ~15.6 |  20.4        | [Download (638MB)](https://s3.amazonaws.com/resnext/imagenet_models/resnext_101_64x4d.t7)       |
 
+###Third-party re-implementations
+
+Besides our torch implmenetation, we recommend to see also the following third-party re-implementations and extensions:
+
+0. Training code in MXNet and pretrained ImageNet models [code](https://github.com/dmlc/mxnet/tree/master/example/image-classification#imagenet-1k)
+0. Caffe prototxt, pretrained ImageNet models (with ResNeXt-152), curves [code](https://github.com/terrychenism/ResNeXt)
