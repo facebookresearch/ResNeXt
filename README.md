@@ -1,4 +1,4 @@
-# ResNext: Aggregated Residual Transformations for Deep Neural Networks
+# ResNeXt: Aggregated Residual Transformations for Deep Neural Networks
 
 By [Saining Xie](http://vcl.ucsd.edu/~sxie), [Ross Girshick](http://www.rossgirshick.info/), [Piotr Dollár](https://pdollar.github.io/), [Zhuowen Tu](http://pages.ucsd.edu/~ztu/), [Kaiming He](http://kaiminghe.com)
 
