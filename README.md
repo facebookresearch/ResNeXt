@@ -18,7 +18,7 @@ This repository contains a [Torch](http://torch.ch) implementation for the [ResN
 [ResNeXt](https://arxiv.org/abs/1611.05431) is a simple, highly modularized network architecture for image classification. Our network is constructed by repeating a building block that aggregates a set of transformations with the same topology. Our simple design results in a homogeneous, multi-branch architecture that has only a few hyper-parameters to set. This strategy exposes a new dimension, which we call “cardinality” (the size of the set of transformations), as an essential factor in addition to the dimensions of depth and width.
 
 
-![teaser](http://vcl.ucsd.edu/~sxie/teaser.png)
+![teaser](http://vcl.ucsd.edu/resnext/teaser.png)
 ##### Figure: Training curves on ImageNet-1K. (Left): ResNet/ResNeXt-50 with the same complexity (~4.1 billion FLOPs, ~25 million parameters); (Right): ResNet/ResNeXt-101 with the same complexity (~7.8 billion FLOPs, ~44 million parameters).
 -----
 
@@ -89,7 +89,7 @@ ImageNet pretrained models are licensed under CC BY-NC 4.0.
 
 ###Third-party re-implementations
 
-Besides our torch implmenetation, we recommend to see also the following third-party re-implementations and extensions:
+Besides our torch implementation, we recommend to see also the following third-party re-implementations and extensions:
 
 0. Training code in MXNet and pretrained ImageNet models [code](https://github.com/dmlc/mxnet/tree/master/example/image-classification#imagenet-1k)
 0. Caffe prototxt, pretrained ImageNet models (with ResNeXt-152), curves [code](https://github.com/terrychenism/ResNeXt)
