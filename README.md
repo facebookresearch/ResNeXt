@@ -48,6 +48,7 @@ There are two new hyperparameters need to be specified to determine the bottlene
 **-baseWidth** and **-cardinality**
 
 ###1x Complexity Configurations Reference Table
+
 | baseWidth | cardinality |
 |---------- | ----------- |
 | 64        | 1           |
@@ -84,7 +85,7 @@ ImageNet pretrained models are licensed under CC BY-NC 4.0.
 | ResNet-50 (1x64d)   |  ~4.1  |  23.9        | [Original ResNet-50](https://github.com/facebook/fb.resnet.torch/tree/master/pretrained)       |
 | ResNeXt-50 (32x4d)  |  ~4.1  |  22.2        | [Download (191MB)](https://s3.amazonaws.com/resnext/imagenet_models/resnext_50_32x4d.t7)       |
 | ResNet-101 (1x64d)  |  ~7.8  |  22.0        | [Original ResNet-101](https://github.com/facebook/fb.resnet.torch/tree/master/pretrained)      |
-| ResNeXt-101 (32x4d) |  ~7.8  |  21.2        | [Download (338MB)] (https://s3.amazonaws.com/resnext/imagenet_models/resnext_101_32x4d.t7)      |
+| ResNeXt-101 (32x4d) |  ~7.8  |  21.2        | [Download (338MB)](https://s3.amazonaws.com/resnext/imagenet_models/resnext_101_32x4d.t7)      |
 | ResNeXt-101 (64x4d) |  ~15.6 |  20.4        | [Download (638MB)](https://s3.amazonaws.com/resnext/imagenet_models/resnext_101_64x4d.t7)       |
 
 ###Third-party re-implementations
