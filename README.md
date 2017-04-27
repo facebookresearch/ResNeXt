@@ -88,9 +88,11 @@ ImageNet pretrained models are licensed under CC BY-NC 4.0.
 | ResNeXt-101 (32x4d) |  ~7.8  |  21.2        | [Download (338MB)](https://s3.amazonaws.com/resnext/imagenet_models/resnext_101_32x4d.t7)      |
 | ResNeXt-101 (64x4d) |  ~15.6 |  20.4        | [Download (638MB)](https://s3.amazonaws.com/resnext/imagenet_models/resnext_101_64x4d.t7)       |
 
-###Third-party re-implementations
+### Third-party re-implementations
 
 Besides our torch implementation, we recommend to see also the following third-party re-implementations and extensions:
 
+0. Training code in PyTorch [code](https://github.com/prlz77/ResNeXt.pytorch)
+0. Convert ImageNet pretrained model to PyTorch model and source. [code](https://github.com/clcarwin/convert_torch_to_pytorch)
 0. Training code in MXNet and pretrained ImageNet models [code](https://github.com/dmlc/mxnet/tree/master/example/image-classification#imagenet-1k)
 0. Caffe prototxt, pretrained ImageNet models (with ResNeXt-152), curves [code](https://github.com/terrychenism/ResNeXt)
