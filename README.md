@@ -12,7 +12,13 @@ UC San Diego, Facebook AI Research
 0. [ImageNet Pretrained Models](#imagenet-pretrained-models)
 0. [Third-party re-implementations](#third-party-re-implementations)
 
+#### News
+* Congrats to the ILSVRC 2017 classification challenge winner [WMW](http://image-net.org/challenges/LSVRC/2017/results).
+ResNeXt is the foundation of their new SENet architecture (a **ResNeXt-152 (64 x 4d)** with the Squeeze-and-Excitation module)!
+* Check out [Figure 6](https://arxiv.org/pdf/1707.06990.pdf) in the new *Memory-Efficient Implementation of DenseNets* paper for a comparision between ResNeXts and DenseNets.
+
 ### Introduction
+
 This repository contains a [Torch](http://torch.ch) implementation for the [ResNeXt](https://arxiv.org/abs/1611.05431) algorithm for image classification. The code is based on [fb.resnet.torch] (https://github.com/facebook/fb.resnet.torch).
 
 [ResNeXt](https://arxiv.org/abs/1611.05431) is a simple, highly modularized network architecture for image classification. Our network is constructed by repeating a building block that aggregates a set of transformations with the same topology. Our simple design results in a homogeneous, multi-branch architecture that has only a few hyper-parameters to set. This strategy exposes a new dimension, which we call “cardinality” (the size of the set of transformations), as an essential factor in addition to the dimensions of depth and width.
@@ -47,7 +53,7 @@ There are two new hyperparameters need to be specified to determine the bottlene
 
 **-baseWidth** and **-cardinality**
 
-###1x Complexity Configurations Reference Table
+### 1x Complexity Configurations Reference Table
 
 | baseWidth | cardinality |
 |---------- | ----------- |
@@ -95,4 +101,4 @@ Besides our torch implementation, we recommend to see also the following third-p
 1. Training code in PyTorch [code](https://github.com/prlz77/ResNeXt.pytorch)
 1. Converting ImageNet pretrained model to PyTorch model and source. [code](https://github.com/clcarwin/convert_torch_to_pytorch)
 1. Training code in MXNet and pretrained ImageNet models [code](https://github.com/dmlc/mxnet/tree/master/example/image-classification#imagenet-1k)
-1. Caffe prototxt, pretrained ImageNet models (with ResNeXt-152), curves [code](https://github.com/terrychenism/ResNeXt)
+1. Caffe prototxt, pretrained ImageNet models (with ResNeXt-152), curves [code](https://github.com/cypw/ResNeXt-1)[code](https://github.com/terrychenism/ResNeXt)
