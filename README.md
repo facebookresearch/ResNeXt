@@ -19,7 +19,7 @@ ResNeXt is the foundation of their new SENet architecture (a **ResNeXt-152 (64 x
 
 ### Introduction
 
-This repository contains a [Torch](http://torch.ch) implementation for the [ResNeXt](https://arxiv.org/abs/1611.05431) algorithm for image classification. The code is based on [fb.resnet.torch] (https://github.com/facebook/fb.resnet.torch).
+This repository contains a [Torch](http://torch.ch) implementation for the [ResNeXt](https://arxiv.org/abs/1611.05431) algorithm for image classification. The code is based on [fb.resnet.torch](https://github.com/facebook/fb.resnet.torch).
 
 [ResNeXt](https://arxiv.org/abs/1611.05431) is a simple, highly modularized network architecture for image classification. Our network is constructed by repeating a building block that aggregates a set of transformations with the same topology. Our simple design results in a homogeneous, multi-branch architecture that has only a few hyper-parameters to set. This strategy exposes a new dimension, which we call “cardinality” (the size of the set of transformations), as an essential factor in addition to the dimensions of depth and width.
 
